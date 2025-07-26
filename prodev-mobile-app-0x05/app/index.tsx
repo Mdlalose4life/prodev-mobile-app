@@ -1,6 +1,7 @@
 import { useRouter } from "expo-router";
 import { Text, View, StyleSheet, Image, ImageBackground, Dimensions, TouchableOpacity } from "react-native";
 import { SafeAreaView, SafeAreaProvider } from "react-native-safe-area-context";
+import { useFonts } from "expo-font";
 
 export default function Index() {
 const router = useRouter();
@@ -39,7 +40,11 @@ const router = useRouter();
                 </TouchableOpacity>
               </View>
               <View style={{ alignItems: "center", paddingVertical: 20 }}>
-                <Text style={{ color: "white" }}>Continue to home</Text>
+                <TouchableOpacity
+                  onPress={()=> router.push("/(home)")}
+                >
+                  <Text style={{ color: "white" }}>Continue to home</Text>
+                </TouchableOpacity>
               </View>
             </View>
           </View>

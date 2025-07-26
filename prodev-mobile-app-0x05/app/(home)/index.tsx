@@ -11,7 +11,7 @@ import {
 } from "react-native";
 
 import PropertyListingCard from "@/components/common/PropertyListingCard";
-import { FILTERS, SAMPLE_DATA } from "@/constants/data";
+import { FILTERS, SAMPLE_DATA, FILTER_IMAGES } from "@/constants/data";
 
 const Home = () => {
   return (
@@ -19,12 +19,12 @@ const Home = () => {
       <View style={styles.searchGroup}>
         <View style={styles.searchFormGroup}>
           <View style={styles.searchControlGroup}>
-            <Text style={styles.searchFormText}>Where to?</Text>
-            <TextInput
-              style={{ ...styles.searchControl, ...styles.searchFormText }}
-              placeholder="Location . Date . Add guest"
-            />
-          </View>
+                <Text style={styles.searchFormText}>Where to?</Text>
+                <TextInput
+                style={{ ...styles.searchControl, ...styles.searchFormText }}
+                placeholder="Location . Date . Add guest"
+                />
+            </View>
           <View style={styles.searchButton}>
             <Feather name="search" size={24} color="white" />
           </View>
@@ -45,7 +45,7 @@ const Home = () => {
                   style={{
                     flex: 1,
                   }}
-                  source={require("@/assets/images/mansion.png")}
+                  source={FILTER_IMAGES[filter]}
                   resizeMode="contain"
                 />
                 <Text>{filter}</Text>
@@ -56,7 +56,9 @@ const Home = () => {
       </View>
 
       <ScrollView style={styles.listingContainer}>
-        <PropertyListingCard listings={SAMPLE_DATA} />
+        {SAMPLE_DATA.map((property, index) => (
+            <PropertyListingCard key={index} {...property} />
+        ))}
         <View style={styles.paginationContainer}>
           <TouchableHighlight style={styles.showMoreButton}>
             <Text style={styles.showMoreButtonText}>Show more</Text>

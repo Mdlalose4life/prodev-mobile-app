@@ -1,5 +1,6 @@
 // @/styles/_homestyle.js
 
+import Search from "@/app/(home)/search";
 import { StyleSheet, Dimensions } from "react-native";
 
 const { width } = Dimensions.get("window");
@@ -12,10 +13,10 @@ export const styles = StyleSheet.create({
 
   
   searchGroup: {
-    paddingTop: 50,
+    paddingTop: 60,
     paddingHorizontal: 20,
     paddingBottom: 20,
-    backgroundColor: "#fff",
+    backgroundColor: "#34967C",
     borderBottomWidth: 1,
     borderBottomColor: "#eee",
   },
@@ -24,32 +25,39 @@ export const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
-    backgroundColor: "#eee",
-    borderRadius: 12,
-    paddingHorizontal: 10,
-    paddingVertical: 12,
+    backgroundColor: "#FFFFFF",
+    borderRadius: 60,
+    paddingHorizontal: 21,
+    paddingVertical: 13,
   },
 
   searchControlGroup: {
-    flex: 1,
-    marginRight: 10,
+    flex:1,
+    paddingVertical:1,
+    height: 'auto',
+    borderRadius: 60,
+    justifyContent: 'center'
   },
 
+
   searchFormText: {
-    fontSize: 14,
-    color: "#555",
+    fontSize: 12,
+    color: "#161117",
+    fontWeight: "700"
   },
 
   searchControl: {
-    marginTop: 4,
-    fontSize: 16,
-    color: "#000",
+    fontSize: 12,
+    color: "#BEBEBE",
+    fontWeight: '400'
   },
 
   searchButton: {
-    backgroundColor: "#000",
+    backgroundColor: "#FFA800",
     padding: 10,
-    borderRadius: 10,
+    borderRadius: 60,
+    paddingHorizontal:10,
+    paddingVertical:10
   },
 
   // Filters
@@ -63,7 +71,7 @@ export const styles = StyleSheet.create({
   filterContainer: {
     width: 80,
     height: 60,
-    backgroundColor: "#f0f0f0",
+    backgroundColor: "#fffff",
     borderRadius: 10,
     marginRight: 10,
     alignItems: "center",

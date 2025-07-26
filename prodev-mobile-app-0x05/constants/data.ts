@@ -123,6 +123,19 @@ const SAMPLE_DATA : PropertyListingProps[] = [
     }
   ];
 
+const FILTER_IMAGES: { [key: string]: any } = {
+  Mansion: require("@/assets/images/mansion.png"),
+  CountrySide: require("@/assets/images/countrySide.png"),
+  Villa: require("@/assets/images/villa.png"),
+  Tropical: require("@/assets/images/palm-tree.png"),
+  New: require("@/assets/images/new.png"),
+  Amazing: require("@/assets/images/amazing.png"),
+  Beachfront: require("@/assets/images/chair.png"),
+  Luxury: require("@/assets/images/five-stars.png"),
+  "Family-Friendly": require("@/assets/images/together.png"),
+  "Pet-Friendly": require("@/assets/images/pet.png"),
+  Secluded: require("@/assets/images/secluded.png"),
+};
 
 const FILTERS: string [] = [
     "Mansion",
@@ -137,4 +150,4 @@ const FILTERS: string [] = [
     "Pet-Friendly",
     "Secluded"
   ];
-  export { SAMPLE_DATA, FILTERS }
+  export { SAMPLE_DATA, FILTERS, FILTER_IMAGES }
